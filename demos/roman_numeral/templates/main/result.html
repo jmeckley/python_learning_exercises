@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}- Result{% endblock %}
+
+{% block content %}
+<div class="well well-sm">
+	<p>
+		The roman numeral is: <strong>{{ value }}<strong>
+	</p>
+</div>
+<p>
+	<a href="{% url 'roman_numeral:index' %}" class="btn btn-primary">Return to form</a>
+</p>
+{% endblock %}
