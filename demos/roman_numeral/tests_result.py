@@ -11,10 +11,6 @@ class ResultTests(TestCase):
         '''When rendering the result it should return response code 200'''
         self.assertEqual(self.response.status_code, 200)
 
-    def test_should_render_result_view(self):
-        '''When rendering the result it should render the result.html view'''
-        self.assertTemplateUsed(self.response, 'main/result.html')
-
     def test_should_contain_result(self):
         '''When roman_numeral it should display the roman numeral'''
         self.assertEqual(self.response.context['value'], '3') 
