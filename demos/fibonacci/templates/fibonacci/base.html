@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Fibonacci Sequence {%block title%}{% endblock %}</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
-	</head>
-	<body>
-		<div class="container">
-			<h1>Calculate Fibonacci Sequence</h1>
-			{% block content %}
-			{% endblock %}
-		</div>
-	</body>
-<html>
+{% extends 'base.html' %}
+
+{%block basetitle %}Fibonacci Sequence {%block title %}{% endblock %}{% endblock %}
+
+{% block renderbody %}
+	<div class="container">
+		<h1>Calculate Fibonacci Sequence</h1>
+		{% block content %}
+		{% endblock %}
+	</div>
+{% endblock %}

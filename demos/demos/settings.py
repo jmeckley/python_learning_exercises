@@ -60,10 +60,10 @@ ROOT_URLCONF = 'demos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
+            'context_processors': [ 
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -76,7 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'demos.wsgi.application'
 
 
-# Database
+# Database 
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
