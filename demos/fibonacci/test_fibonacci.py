@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .fibonacci import fibonacci, fibonacci_sequence
+from .fibonacci import fibonacci, fibonacci_sequence, is_part_of_fibonacci_sequence
 
 class FibonacciTests(TestCase):
 
@@ -34,3 +34,16 @@ class FibonacciTests(TestCase):
         result = fibonacci_sequence(7)
 
         self.assertEqual(expected, result)
+
+    def test_is_part_of_fibonacci_sequence_for_known_values(self):
+        '''is part of fibonacci sequence should return True when number is part of sequence'''
+       
+        for limit, expected in self.known_values:
+            result = is_part_of_fibonacci_sequence(expected)
+            self.assertTrue(result, "is_part_of_fibonacci_sequence({}) should return True but did not. Actual result: {}".format(expected, result))
+
+    def test_is_part_of_fibonacci_sequence_for_known_values(self):
+        '''is part of fibonacci sequence should return False when number is not part of sequence'''
+       
+        result = is_part_of_fibonacci_sequence(10)
+        self.assertFalse(result)

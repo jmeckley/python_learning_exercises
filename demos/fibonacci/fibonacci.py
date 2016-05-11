@@ -20,3 +20,13 @@ def fibonacci_sequence(limit):
 	result.reverse()
 
 	return result
+
+def is_part_of_fibonacci_sequence(number):
+	limit = 0
+	value = 0
+
+	while value < number:
+		value = fibonacci(limit)
+		limit = limit + 1
+
+	return value == number
