@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'debug_toolbar',
+    'debug_toolbar',
     'crispy_forms',
-    'roman_numeral'
+    'roman_numeral',
+    'fibonacci'
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -20,8 +20,9 @@ class MainViewTests(TestCase):
 
     def test_get_success_url_should_contain_an_empty_form(self):
         '''When getting the success url it should resolve the result url'''
+        expected = reverse('roman_numeral:result', args = ['X'])
         self.sut.roman_numeral = 'X'
         
         result = self.sut.get_success_url()
 
-        self.assertEqual(result, '/result/X')
+        self.assertEqual(result, expected)

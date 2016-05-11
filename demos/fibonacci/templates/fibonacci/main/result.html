@@ -1,0 +1,14 @@
+{% extends 'fibonacci/base.html' %}
+
+{% block title %}- Result{% endblock %}
+
+{% block content %}
+<div class="well well-sm">
+	<p>
+		The fibonacci sequence is: <strong>{{ sequence }}<strong>
+	</p>
+</div>
+<p>
+	<a href="{% url 'fibonacci:index' %}" class="btn btn-primary">Return to form</a>
+</p>
+{% endblock %}

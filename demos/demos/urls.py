@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
-    url(r'^', include('roman_numeral.urls'))
+    url(r'^', include('roman_numeral.urls')),
+    url(r'^', include('fibonacci.urls'))
 ]
